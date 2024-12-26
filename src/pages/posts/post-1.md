@@ -12,7 +12,7 @@ tags: ["astro", "blogging", "apprentissage en public"]
 
 Publié le : 2024-12-26
 
-Bienvenue sur min _nouveau blog_ dédié à l'apprentissage d'Astro ! Ici, je vais partager mon parcours d'apprentissage en construisant un nouveau site web.
+Bienvenue sur mon _nouveau blog_ dédié à l'apprentissage d'Astro ! Ici, je vais partager mon parcours d'apprentissage en construisant un nouveau site web.
 
 ## Ce que j'ai accompli
 
