@@ -1,5 +1,21 @@
 ---
+import { coerce, literal } from "astro:schema";
+
 const pageTitle = "A propos de moi";
+
+const identity = {
+	firstName: "Antonin",
+	name: "Gourinchas",
+	country: "France",
+	occupation: "Développeur web et vba",
+	hobbies: ["la photographie", "le sport", "le cinéma"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Astro", "Rédaction de documentation"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -20,5 +36,21 @@ const pageTitle = "A propos de moi";
         <a href="/">Accueil</a>
         <p>Pour aller sur mon blog :</p>
         <a href="/blog">Mon blog</a>
+		<br>
+		<p>Voici quelques faits me concernant :</p>
+		<ul>
+			<li>Je m'appelle {identity.firstName} {identity.name}.</li>
+			<li>Je vis en {identity.country} et je travaille en tant que {identity.occupation}.</li>
+			{identity.hobbies.length >= 2 &&
+				<li>Deux de mes loisirs sont : {identity.hobbies[0]} et {identity.hobbies[1]}.</li>
+				}
+		</ul>
+		<p>Voici mes compétences :</p>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+		{happy && <p>Je suis heureux d'apprendre Astro.</p>}
+		{finished && <p>J'ai terminé ce tutoriel.</p>}
+		{goal === 3 ? <p>Mon objectif est de le terminer en 3 jours.</p> : <p>Mon objectif n'est pas de le terminer en 3 jours.</p>}
 	</body>
 </html>
