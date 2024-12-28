@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
 const pageTitle = "Bienvenue sur ma page de blog !";
 ---
 
@@ -22,9 +23,7 @@ const pageTitle = "Bienvenue sur ma page de blog !";
 			<li><a href="/posts/post-3/">Article 3</a></li>
 		</ul>
 		<br>
-        <p>Pour aller sur ma page a propos :</p>
-        <a href="/about">A propos de moi</a>
-        <p>Pour aller sur ma page d'accueil :</p>
-        <a href="/">Accueil</a>
+		<Navigation/>
+		<Footer/>
 	</body>
 </html>
